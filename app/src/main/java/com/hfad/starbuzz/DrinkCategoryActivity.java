@@ -2,6 +2,8 @@ package com.hfad.starbuzz;
 
 import android.app.ListActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class DrinkCategoryActivity extends ListActivity {
 
@@ -9,5 +11,10 @@ public class DrinkCategoryActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drink_category);
+
+        ArrayAdapter<Drink> listAdapter = new ArrayAdapter<Drink>(this, android.R.layout.simple_list_item_1, Drink.drinks);
+
+        ListView listView = getListView();
+        listView.setAdapter(listAdapter);
     }
 }
