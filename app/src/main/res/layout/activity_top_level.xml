@@ -16,6 +16,7 @@
         android:contentDescription="@string/starbuzz_logo"
         android:src="@drawable/starbuzz_logo" />
 
+
     <ListView
         android:id="@+id/list_options"
         android:layout_width="match_parent"
